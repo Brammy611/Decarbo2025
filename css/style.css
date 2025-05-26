@@ -233,7 +233,7 @@ footer {
     }
 
     .carousel-item {
-        height: 50vh;
+        height: 100vh;
         background-size: contain;
     }
 }
