@@ -1,0 +1,239 @@
+:root {
+    --primary-color: #319E80;
+    --dark-gray: #504A48;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-padding-top: 76px;
+}
+
+h1, h3, h4 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 600;
+    color: #036266;
+    margin-left: 10px;
+}
+
+.logo img{
+    width: 50px;
+    height: auto;
+    float: left;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.nav-link {
+    color: var(--dark-gray);
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #036266;
+}
+
+.nav-item {
+    margin-left: 15px;
+    font-weight: 700;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: all 0.3s ease;
+    border-radius: 15px;
+}
+
+.btn-primary:hover {
+    background-color: #ffffff;
+    border-color: #319E80;
+    color: #319E80;
+    font-weight: 600;
+    border: solid 2px #319E80;
+}
+
+/* Carousel Styles */
+.carousel-item {
+    height: 100vh;
+    min-height: 500px;
+    background: no-repeat center center scroll;
+    background-size: cover;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 100vh;
+    }
+
+    .carousel-item img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .carousel-caption {
+        bottom: 20%;
+        padding: 0 15px;
+    }
+}
+
+.carousel-caption {
+    bottom: 30%;
+    z-index: 2;
+}
+
+/* Isi */
+#aboutus {
+    display: flex;
+    flex-direction: column; /* Tambahkan ini agar item ditumpuk vertikal */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 100px 0;
+    background-image: url('../images/decarbo(2).png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-sizing: border-box;
+    text-align: center; /* Agar teks juga rata tengah */
+}
+
+#aboutus h2 {
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+#aboutus img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    margin: 20px 0;
+}
+
+#aboutus p {
+    max-width: 800px;
+    text-align: center;
+    line-height: 1.8;
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+
+h2 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    color: #319E80;
+}
+
+.tema {
+    color: #54af48;
+}
+
+/* Event Cards */
+.event-card {
+    transition: transform 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.event-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-gray);
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    margin: 15px 0;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: var(--primary-color) !important;
+    transform: translateY(-3px);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-info a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        display: none;
+    }
+    
+    .logo {
+        margin-right: auto;
+    }
+    
+    .logo img {
+        margin-left: 0;
+    }
+
+    #aboutus {
+        padding: 50px 0;
+    }
+
+    #aboutus h2 {
+        font-size: 3rem;
+    }
+
+    #aboutus img {
+        max-width: 300px;
+        padding: 10px;
+    }
+
+    #aboutus p {
+        font-size: 0.8rem;
+    }
+
+    .carousel-item {
+        height: 50vh;
+        background-size: contain;
+    }
+}

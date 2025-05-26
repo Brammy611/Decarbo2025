@@ -1,0 +1,194 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.competition-header{
+    background-image: url('../images/decarbo.png');
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 70px;
+    color: white;
+}
+
+.competition-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px; 
+}
+
+.competition-section {
+    padding: 60px 0;
+    flex: 1;
+    margin-bottom: 30px;
+    position: relative;
+
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+
+.competition-card {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    outline: 4px solid #49B66E;
+}
+
+.card-header {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border-bottom: 2px solid #eee; */
+    position: relative;
+    z-index: 1;
+}
+
+
+.competition-card.expanded {
+    background: white;
+}
+
+.card-content {
+    position: relative;
+    z-index: 1;
+    background: white;
+    border-radius: 15px;
+}
+
+.card-header h2 {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.toggle-icon {
+    font-size: 24px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.card-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.competition-card.expanded .card-content {
+    max-height: 2000px; /* Adjust based on content */
+    padding: 2rem;
+}
+
+.competition-card:hover {
+    transform: translateY(-5px);
+}
+
+.competition-content {
+    display: grid;
+    gap: 2rem;
+}
+
+.description, .requirements, .timeline {
+    margin-bottom: 2rem;
+}
+
+.requirements ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.requirements ul li {
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.requirements ul li:before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
+
+/* Update timeline styles to match energyday.html */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.timeline-item .time {
+    font-weight: 600;
+    color: var(--primary-color);
+    min-width: 120px;
+    padding-right: 20px;
+}
+
+.timeline-item .content {
+    flex: 1;
+}
+
+.timeline-item .content h4 {
+    margin-bottom: 0.5rem;
+    color: var(--dark-gray);
+}
+
+.timeline-item .content p {
+    margin-bottom: 0;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .timeline-item {
+        flex-direction: column;
+    }
+    
+    .timeline-item .time {
+        margin-bottom: 10px;
+    }
+}
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .timeline-item {
+        flex-direction: column;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
